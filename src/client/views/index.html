@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+</head>
+
+<body>
+    <header>
+        <div class="">
+            The Logo
+        </div>
+        <div class="">
+            navigation
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <form>
+                <input id="text" type="text" name="input" value="" placeholder="Text">
+                <input type="button" name="button" value="submit" onclick="return Client.handleSubmit()">
+            </form>
+        <section>
+
+        <section name="result">
+            <strong>Form Results:</strong>
+            <div id="results"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>This is a beautiful footer.</p>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+
+</html>
